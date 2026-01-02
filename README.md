@@ -1,2 +1,16 @@
-# Radar-Object-Tracking
-Internship project – YOLOv8 &amp; ByteTrack based object tracking
+#  Radar-Based Object Tracking Project (YOLOv8 + ByteTrack) This project was developed during my internship and focuses on **real-time object detection, tracking, and analysis** within a predefined region using computer vision techniques. Due to company and internship confidentiality policies, **only core implementation logic and documentation are shared**. --- 
+##  Project Overview The aim of this project is to: - Detect people in real-time using a camera feed - Track detected objects across frames using unique IDs - Count unique individuals entering a specific Region of Interest (ROI) - Analyze performance and behavior through multiple visual analytics The system combines **YOLOv8** for object detection and **ByteTrack** for robust multi-object tracking. --- 
+##  Key Features - ✅ Real-time object detection with **YOLOv8** - ✅ Multi-object tracking with **ByteTrack** - ✅ Unique ID assignment for each detected person - ✅ Fixed **ROI (Region of Interest)** for focused analysis - ✅ Prevention of double-counting using set-based ID control - ✅ Object size (width × height) measurement inside ROI - ✅ Performance evaluation using FPS metrics - ✅ Analytical visualizations and graphs ---
+##  Technologies Used - **Python** - **YOLOv8 (Ultralytics)** - **ByteTrack** - **OpenCV** - **NumPy** - **Matplotlib** ---
+##  Project Structure 
+Radar-Object-Tracking/
+│
+├── main.py # Main implementation (detection, tracking, ROI, analysis)
+└──  bytetrack.yaml # Tracker configuration file
+
+##  How It Works 1. The system captures frames from a live camera feed. 2. YOLOv8 detects objects (persons) in each frame. 3. ByteTrack assigns and maintains unique IDs for detected objects. 4. A fixed ROI is drawn on the screen. 5. When a new ID enters the ROI for the first time, it is counted. 6. Object dimensions within the ROI are recorded. 7. Performance and behavior are analyzed using multiple graphs: - Total unique person count over time - Number of active persons per frame - FPS (Frames Per Second) - ID tracking timeline - Object size distribution - Confidence–F1 relationship (experimental) ---
+##  Output & Analysis The system produces: - Annotated live video output with bounding boxes and IDs - Real-time counters displayed on screen - Post-run analytical graphs for: - Crowd behavior - System performance - Tracking stability ---
+##  Notes on Data & Models - Pretrained **YOLOv8 weights (yolov8s.pt)** are provided by **Ultralytics** and are **not included** in this repository. - The model weights are downloaded automatically when the script is executed. - Some evaluation plots (e.g., F1-score vs confidence) are illustrative and intended for analytical demonstration. --- 
+##  My Responsibilities - Designed the object tracking pipeline - Integrated YOLOv8 with ByteTrack - Implemented ROI-based counting logic - Developed performance and behavior analysis - Interpreted results and prepared technical documentation --
+- ##  Confidentiality Notice This project was developed as part of an internship. Certain datasets, internal resources, and extended implementations are **not publicly shared** in accordance with confidentiality agreements. ---
+- ##  Skills Gained - Real-time computer vision systems - Multi-object tracking algorithms - Performance evaluation (FPS, tracking stability) - Practical use of deep learning models - Clean and professional project documentation
